@@ -1,0 +1,40 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+    font-size: 1.2rem;
+}
+
+header{
+    text-align: center;
+    svg{
+        fill: rgb(54, 216, 255);
+        width: 12rem;
+        padding-top: 10rem;
+    }
+    button{
+        border: none;
+        border-radius: 0.4rem;
+        background-color: blue;
+        color: white;
+        width: 10rem;
+        font-size: 1.2rem;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color:#8080ff;
+        transition: 0.2s;
+    }
+    h1{
+        font-size: 1rem;
+        margin-bottom: 5rem;
+        color: rgb(8, 72, 85)
+    }
+}
+.ui-header{
+    text-align: center;
+    padding: 3rem 0;
+    h1{
+        font-size: 1rem;
+    }
+}
+
