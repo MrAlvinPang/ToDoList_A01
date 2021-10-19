@@ -1,5 +1,3 @@
-import landingPage from "./pages/landingPage"
-
+import Router from "./router/routes";
 const app = document.querySelector('#app')
-
-app.appendChild(landingPage())
+Router(window.location.pathname)

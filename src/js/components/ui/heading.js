@@ -5,7 +5,7 @@ const heading = function (elementType='h2', label="uiHeading", className="ui-Hea
     const template = `<${elementType} class="${className}">${label}</${elementType}>`
     const element = makeElement(template)
 
-    return template
+    return element
 
 }
 

@@ -1,33 +1,36 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: whitesmoke;
+    color: darkblue;
     font-size: 1.2rem;
 }
 
-header{
+.landing-Page{
     text-align: center;
     svg{
-        fill: rgb(54, 216, 255);
+        fill: #36d8ff;
         width: 12rem;
         padding-top: 10rem;
     }
-    button{
+    a{
+        text-decoration: none;
         border: none;
         border-radius: 0.4rem;
         background-color: blue;
         color: white;
-        width: 10rem;
+        padding: 0.1rem 2.5rem;
         font-size: 1.2rem;
     }
-    button:hover{
+    a:hover{
+        text-decoration: none;
         cursor: pointer;
         background-color:#8080ff;
+        color: white;
         transition: 0.2s;
     }
     h1{
         font-size: 1rem;
         margin-bottom: 5rem;
-        color: rgb(8, 72, 85)
     }
 }
 .ui-header{
