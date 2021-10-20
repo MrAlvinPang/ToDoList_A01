@@ -7,7 +7,7 @@ import link from "../components/ui/link";
 const homePage = function(){
     const homeHeader = document.createElement('header')
     homeHeader.classList.add('home-page')
-    const h1 = heading('h1', 'What\'s up, Alvin!')
+    const h1 = heading('h1', 'What\'s up, Alvin!', 'home-tagline')
     const linkElem = link("Error Page", "/error")
 
     homeHeader.append(linkElem)

@@ -2,7 +2,7 @@
 
     text-align: center;
 
-    .ui-Heading{
+    .home-tagline{
         margin: 2rem 10rem .5rem 5rem;
         font-size: 2rem;
         font-weight: bold;
@@ -15,5 +15,10 @@
 
     .ui-Header{
         font-size: 1rem;
+    }
+
+    .ui-Link{
+        text-decoration: none;
+        transition: 0.2s;
     }
 }

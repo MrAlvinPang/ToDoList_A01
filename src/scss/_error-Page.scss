@@ -1,28 +1,33 @@
 .error-page{
     text-align: center;
-    padding-top: 10rem;
+    padding-top: 1rem;
     svg{
-        fill: rgba(54, 216, 255, 0.5);
+        fill: rgba(54, 216, 255, 0.3);
         width: 5rem;
         text-align: center;
     }
 
     .ui-Header{
         font-size: 1rem;
-        color: rgba(darkblue, 0.5)
+        color: rgba(darkblue, 0.3);
+        padding-bottom: 10rem;
     }
 
-    .ui-Heading{
+    .error-tagline{
         font-size: 2rem;
-        padding: 1rem 0 2rem 0;
+        font-weight: bold;
+        padding-top: 1rem;
+    }
+
+    .error-message{
+        font-size: 1.1rem;
+        color: rgba(darkblue, 0.5);
+        padding: 0 8rem 2rem 8rem;
     }
 
     a{
         text-decoration: none;
-        border: none;
-        border-radius: 0.4rem;
-        background-color: blue;
-        color: white;
+        color: blue;
         padding: 0.1rem 2.5rem;
         font-size: 1.2rem;
     }
@@ -30,8 +35,7 @@
     a:hover{
         text-decoration: none;
         cursor: pointer;
-        background-color:#8080ff;
-        color: white;
+        color:#8080ff;
         transition: 0.2s;
     }
 }
