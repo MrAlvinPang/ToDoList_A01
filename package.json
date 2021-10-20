@@ -8,7 +8,9 @@
   "default": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx parcel src/index.html",
+    "start": "npm run data && npm run dev",
+    "data": "mkdir dist && copy -R /src/js/data dist/data",
+    "dev": "npx parcel src/index.html",
     "build": "npx parcel build src/index.html",
     "clean:dev": "rmdir /s /q .parcel-cache dist",
     "clean:git": "rmdir /s /q .parcel-cache dist  node_modules"

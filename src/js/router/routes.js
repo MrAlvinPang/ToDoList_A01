@@ -21,5 +21,5 @@ const Router = (pathname) => {
     app.appendChild(routes[window.location.pathname])
 }
 
-export default Router
+export {Router}
 export {routes}
