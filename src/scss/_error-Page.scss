@@ -1,17 +1,22 @@
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: whitesmoke;
-    color: darkblue;
-    font-size: 1.2rem;
-}
-
-.landing-Page{
+.error-page{
     text-align: center;
     padding-top: 10rem;
     svg{
-        fill: #36d8ff;
-        width: 12rem;
+        fill: rgba(54, 216, 255, 0.5);
+        width: 5rem;
+        text-align: center;
     }
+
+    .ui-Header{
+        font-size: 1rem;
+        color: rgba(darkblue, 0.5)
+    }
+
+    .ui-Heading{
+        font-size: 2rem;
+        padding: 1rem 0 2rem 0;
+    }
+
     a{
         text-decoration: none;
         border: none;
@@ -21,6 +26,7 @@ body{
         padding: 0.1rem 2.5rem;
         font-size: 1.2rem;
     }
+
     a:hover{
         text-decoration: none;
         cursor: pointer;
@@ -28,16 +34,4 @@ body{
         color: white;
         transition: 0.2s;
     }
-    h1{
-        font-size: 1rem;
-        margin-bottom: 5rem;
-    }
 }
-.ui-header{
-    text-align: center;
-    padding: 3rem 0;
-    h1{
-        font-size: 1rem;
-    }
-}
-
