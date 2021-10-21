@@ -1,4 +1,4 @@
-import link from "../ui/link";
+import link from "../components/ui/link";
 import {getStore} from "./store"
 
 function reducers ({action, payload, ...rest}){

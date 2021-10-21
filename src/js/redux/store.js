@@ -1,7 +1,7 @@
 let store = null
 
 function createStore(data=[]){
-    if(store == null){
+    if(store === null){
         store = [...data]
     }
     return null

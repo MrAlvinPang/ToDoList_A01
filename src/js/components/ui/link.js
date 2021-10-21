@@ -1,4 +1,4 @@
-import Router from "../../router/routes";
+import {Router} from "../../router/routes";
 import makeElement from "../../utils/makeElement";
 
 const onRequestPage = function(e){

@@ -1,5 +1,4 @@
 .home-page{
-
     text-align: center;
 
     .home-tagline{
@@ -20,5 +19,20 @@
     .ui-Link{
         text-decoration: none;
         transition: 0.2s;
+    }
+
+    .add-button{
+        font-size: 3rem;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 10rem;
+        border: 0.3rem solid white;
+        text-align: center;
+        background-color: blue;
+        color: white;
+    }
+
+    .add-button:hover{
+        cursor: pointer;
     }
 }
