@@ -39,13 +39,14 @@
         font-size: 0.8rem;
         justify-content: center;
     }
+
     li{
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         box-shadow: 1.2px 1.2px #aaa;
         margin: 0.6rem 0.6rem;
         padding: 1rem;
-        max-width: 13rem;
-        max-height: 13rem;
+        width: 12rem;
+        height: 12rem;
         background-color: white;
     }
 
@@ -55,13 +56,17 @@
         margin-bottom: 0.1rem;
     }
 
+    .card-desc{
+        margin-bottom: 2rem;
+    }
+
     .card-comp, .card-date{
         font-size: 0.6rem;
     }
 
     .controls button{
         border: none;
-        margin: 0.2rem 0.5rem;
+        margin: 1rem 1.7rem 0 0.5rem;
         background-color: white;
     }
 
