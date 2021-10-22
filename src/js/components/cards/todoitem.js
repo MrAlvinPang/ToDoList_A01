@@ -3,10 +3,10 @@ import makeElement from "../../utils/makeElement";
 const items = function({id, category, description, isComplete, endDate}){
     const template = `
     <li class="todoitems" data-key="${id}">
-    <p> ${category} </p>
-    <p> ${description}</p>
-    <p>complete: ${isComplete}</p>
-    <p>due: ${endDate}</p>
+    <p class="card-title"> ${category} </p>
+    <p class="card-desc"> ${description}</p>
+    <p class="card-comp">Complete: ${isComplete}</p>
+    <p class="card-date">Due: ${endDate}</p>
     <p class="controls"><button>edit</button><button>delete</button></p> 
     </li>
     `;
