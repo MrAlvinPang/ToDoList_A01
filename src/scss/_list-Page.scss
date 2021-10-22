@@ -1,0 +1,65 @@
+.list-page{
+    text-align: center;
+
+    .list-page-tagline{
+        margin: 2rem 10rem .5rem 5rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    svg{
+        fill: rgba(54, 216, 255, 0.3);
+        width: 2.5rem;
+    }
+
+    .ui-Header{
+        font-size: 1rem;
+        color: rgba(darkblue, 0.3)
+    }
+
+    .ui-Link{
+        text-decoration: none;
+        transition: 0.2s;
+    }
+
+    h2{
+        font-size: 1rem;
+        text-align: left;
+        padding-left: 2rem;
+    }
+
+    //Styles for cards
+
+    ul{
+        display: flex;
+        flex-flow: wrap;
+        text-align: left;
+        padding: 0 1rem;
+        font-size: 1rem;
+        justify-content: center;
+    }
+    li{
+        border: 2px solid lightblue;
+        border-radius: 1rem;
+        box-shadow: 2px 2px #888;
+        margin: 0.6rem 0.6rem;
+        padding: 1rem;
+        max-width: 13rem;
+        max-height: 13rem;
+    }
+
+    .add-button{
+        font-size: 3rem;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 10rem;
+        border: 0.3rem solid white;
+        text-align: center;
+        background-color: blue;
+        color: white;
+    }
+
+    .add-button:hover{
+        cursor: pointer;
+    }
+}

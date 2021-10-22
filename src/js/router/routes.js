@@ -1,10 +1,10 @@
 import landingPage from "../pages/landingPage";
-import homePage from "../pages/homePage";
+import listPage from "../pages/listPage";
 import errorPage from "../pages/errorPage";
 
 const routes = {
     "/": landingPage,
-    "/home": homePage,
+    "/list": listPage,
 }
 
 const Router = (pathname) => {

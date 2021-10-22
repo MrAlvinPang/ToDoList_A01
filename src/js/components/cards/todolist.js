@@ -2,7 +2,7 @@ import makeElement from './../../utils/makeElement'
 
 const todolist = function(){
     const template = `
-    <aside id="todolist" class="todolist>
+    <aside id="todolist" class="todolist">
     <header>
         <h2>To Do..</h2>
     </header>
@@ -16,4 +16,5 @@ const todolist = function(){
     `
     return makeElement(template)
 }
+
 export default todolist

@@ -1,11 +1,12 @@
 import makeElement from "../../utils/makeElement";
 
-const items = function(id, category, description, iscomplete){
+const items = function({id, category, description, isComplete, endDate}){
     const template = `
-    <li class="employee" data-key="${id}">
+    <li class="todoitems" data-key="${id}">
     <p> ${category} </p>
-    <p>email: ${description}</p>
-    <p>phone: ${iscomplete}</p> 
+    <p> ${description}</p>
+    <p>complete: ${isComplete}</p>
+    <p>due: ${endDate}</p>
     <p class="controls"><button>edit</button><button>delete</button></p> 
     </li>
     `;
