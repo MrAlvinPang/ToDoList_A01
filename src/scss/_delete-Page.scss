@@ -1,0 +1,29 @@
+.delete-page{
+    text-align: center;
+    svg{
+        fill: #36d8ff;
+        width: 12rem;
+        padding-top: 2rem;
+    }
+    .delete-page-tagline{
+        padding-bottom: 2rem;
+    }
+
+    button{
+        text-decoration: none;
+        border: none;
+        border-radius: 0.4rem;
+        background-color: blue;
+        color: white;
+        padding: 0.1rem 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color:#8080ff;
+        color: white;
+        transition: 0.2s;
+    }
+}
