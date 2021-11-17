@@ -1,5 +1,6 @@
 .edit-page{
-    margin-top: 5rem;
+    max-width: 27rem;
+    margin: 5rem auto 5rem auto;
     text-align: center;
     svg{
         fill: #36d8ff;
@@ -34,24 +35,32 @@
         font-size: 1rem;
 
         input{
-            height: 1.3rem;
+            height: 1.6rem;
+            padding-left: 8px;
             border: none;
             border-bottom: 1.5px solid #ddd;
             border-radius: 4px;
             font-size: 1rem;
+            
         }
         label{
             padding-left: 1rem;
         }
+
+        select{
+            border: none;
+            border-radius: 2px;
+        }
+
         .complete-field{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         .complete-field input{
-            transform: scale(2);
+            transform: scale(1.8);
             margin-left: 1rem;
             margin-bottom: 7px;
         }
@@ -68,6 +77,8 @@
                 padding: 5px;
                 border-radius: 4px;
                 resize: none;
+                border: none;
+                border-bottom: 1.5px solid #ddd;
             }
         } 
     }
