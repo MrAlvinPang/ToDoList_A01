@@ -5,6 +5,7 @@ import button from "../components/ui/button"
 import reducers from "../redux/reducers";
 import { getStore } from "../redux/store";
 import { Router } from "../router/routes";
+import todolist from "../components/cards/todolist";
 
 const cancelButton = button("cancel")
 const editButton = button("save")
@@ -12,8 +13,6 @@ const editButton = button("save")
 const editPage = function(props){
     const page = document.createElement('div')
     const h1 = heading('h1', 'What would you like to change?', 'edit-page-tagline')
-    console.log(props)
-
 
     page.classList.add("edit-page")
     // page.append(makeElement(logo))
@@ -27,6 +26,11 @@ const editPage = function(props){
         cleanUp()
         Router('/list')
     }
+    function onSaveItem(e) {
+        
+    }
+
+    //creation of form
 
     let formTemplate = `
     <form method="post">
@@ -38,11 +42,11 @@ const editPage = function(props){
         <div class="category-field">
             <label for="category">Category</label>
             <select id="category">
-                <option value="home" ${props.category === 'Home' ? 'selected' : ''}>Home</option>
-                <option value="school" ${props.category === 'School' ? 'selected' : ''}>School</option>
-                <option value="health" ${props.category === 'Health' ? 'selected' : ''}>Health</option>
-                <option value="friends" ${props.category === 'Friends' ? 'selected' : ''}>Friends</option>
-                <option value="work" ${props.category === 'Work' ? 'selected' : ''}>Work</option>
+                <option value="Home" ${props.category === 'Home' ? 'selected' : ''}>Home</option>
+                <option value="School" ${props.category === 'School' ? 'selected' : ''}>School</option>
+                <option value="Health" ${props.category === 'Health' ? 'selected' : ''}>Health</option>
+                <option value="Friends" ${props.category === 'Friends' ? 'selected' : ''}>Friends</option>
+                <option value="Work" ${props.category === 'Work' ? 'selected' : ''}>Work</option>
             </select>
         </div>
         
@@ -88,11 +92,15 @@ const editPage = function(props){
     const pageHeader = makeElement(headerTemplate) 
     pageHeader.querySelector('div').innerHTML = ''
     cancelButton.addEventListener('click', onCancelEdit)  
-    // editButton.addEventListener('click', onRemoveItem)
+    editButton.addEventListener('click', onSaveItem)
     const formHeader = makeElement(formTemplate)
+
+    //collecting user inputed values
+
     page.append(formHeader)
     pageHeader.querySelector('div').append(cancelButton, editButton)
     page.append(pageHeader)
     return page
+
 }
 export default editPage

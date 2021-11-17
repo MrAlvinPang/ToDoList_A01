@@ -48,6 +48,9 @@
         width: 12rem;
         height: 12rem;
         background-color: white;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
     }
 
     .card-title{
@@ -66,13 +69,17 @@
 
     .controls button{
         border: none;
-        margin: 1rem 1.7rem 0 0.5rem;
+        margin-top: 0.5rem;
         background-color: white;
     }
     .controls button:hover{
         cursor: pointer;
+        transition: 0.2s;
     }
 
+    .controls button:last-child{
+        margin-left: 3rem;
+    }
     .add-button{
         font-size: 1.5rem;
         height: 3rem;
