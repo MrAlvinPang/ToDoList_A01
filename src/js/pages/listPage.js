@@ -60,7 +60,6 @@ const listPage = function(){
             element.querySelector('#delete').addEventListener('click', onDeleteItem)
             element.querySelector('#edit').addEventListener('click', onEditItem)
             ul.append(element)
-            console.log("element: ", element)
         })
         listHeader.append(container)
     }
