@@ -52,9 +52,7 @@ const editPage = function(props){
         
         <div class="title-field">
             <label for="title">Desc</label>
-            <textarea id="title">
-            ${props.description}
-            </textarea>
+            <textarea id="title">${props.description}</textarea>
         </div>
 
         <div class="startdate-field">

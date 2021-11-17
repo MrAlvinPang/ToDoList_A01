@@ -23,6 +23,7 @@ const deletePage = function(props){
     const selectedItem = items(props)
     page.append(selectedItem)
     selectedItem.querySelector('.controls').remove()
+    selectedItem.querySelector('.card-comp').remove()
 
     function cleanUp(){
         cancelButton.removeEventListener('click', onCancelDelete)

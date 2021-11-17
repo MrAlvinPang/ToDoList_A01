@@ -72,8 +72,14 @@
         margin-top: 0.5rem;
         background-color: white;
     }
-    .controls button:hover{
+    
+    .controls svg{
+        fill: #ccc;
+    }
+
+    .controls svg:hover{
         cursor: pointer;
+        fill: #aaa;
         transition: 0.2s;
     }
 
@@ -90,9 +96,12 @@
         color: white;
         border:none;
         box-shadow: 1px 1px 1px 1px #ddd;
+        margin-top: 1rem;
     }
 
     .add-button:hover{
         cursor: pointer;
+        background-color: blue;
+        transition: 0.3s;
     }
 }
