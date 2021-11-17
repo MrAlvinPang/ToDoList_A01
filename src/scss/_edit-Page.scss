@@ -1,0 +1,75 @@
+.edit-page{
+    margin-top: 5rem;
+    text-align: center;
+    svg{
+        fill: #36d8ff;
+        width: 12rem;
+        padding-top: 2rem;
+    }
+    .edit-page-tagline{
+        padding-bottom: 2rem;
+    }
+
+    button{
+        text-decoration: none;
+        border: none;
+        border-radius: 0.4rem;
+        background-color: blue;
+        color: white;
+        padding: 0.1rem 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1.2rem;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color:#8080ff;
+        color: white;
+        transition: 0.2s;
+    }
+    form{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        font-size: 1rem;
+
+        input{
+            height: 1.3rem;
+            border: none;
+            border-bottom: 1.5px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        label{
+            padding-left: 1rem;
+        }
+        .complete-field{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.4rem;
+        }
+
+        .complete-field input{
+            transform: scale(2);
+            margin-left: 1rem;
+            margin-bottom: 7px;
+        }
+
+        .title-field{
+            display: inline;
+            label{
+                vertical-align: top;
+            }
+            textarea{
+                font-size: 0.8rem;
+                width: 360px;
+                height: 200px;
+                padding: 5px;
+                border-radius: 4px;
+                resize: none;
+            }
+        } 
+    }
+
+}

@@ -6,6 +6,7 @@ import todolist from "../components/cards/todolist";
 import { getStore } from "../redux/store";
 import items from "../components/cards/todoitem";
 import { Router } from "../router/routes";
+import button from "../components/ui/button";
 
 const listPage = function(){
     //getting list data
@@ -17,11 +18,12 @@ const listPage = function(){
     
     listHeader.classList.add('list-page')
     const h1 = heading('h1', 'What\'s up, Alvin!', 'list-page-tagline')
-
+    const addButton = button('+', 'add-button')
     listHeader.append(h1)
     listHeader.appendChild(makeElement(logo()))
     listHeader.appendChild(makeElement(header('Your favorite daily tracker')))
-
+    listHeader.append(addButton)
+    addButton.addEventListener('click', onAddItem)
     function cleanUp(){
         const items = container.querySelectorAll('aside')
         items.forEach((item) =>{
@@ -32,11 +34,21 @@ const listPage = function(){
 
     //Event handler for removing employee
     function onDeleteItem (e){
+        console.log(e.currentTarget)
         const itemId = e.currentTarget.dataset.key
-        console.log(itemId)
         const item = getStore().filter((item) => item.id === itemId)
         cleanUp()
         Router('/delete', item[0])
+    }
+
+    function onEditItem (e){
+        const itemId = e.currentTarget.dataset.key
+        const item = getStore().filter((item) => item.id === itemId)
+        Router('/edit', item[0])
+    }
+
+    function onAddItem(){
+        Router('/add')
     }
 
     //displaying to do list
@@ -46,7 +58,9 @@ const listPage = function(){
         const elements = itemList.map(itm => items(itm))
         elements.forEach(element => {
             element.querySelector('#delete').addEventListener('click', onDeleteItem)
+            element.querySelector('#edit').addEventListener('click', onEditItem)
             ul.append(element)
+            console.log("element: ", element)
         })
         listHeader.append(container)
     }

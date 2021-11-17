@@ -1,14 +1,22 @@
 let store = null
 
-function createStore(data=[]){
-    if(store === null){
-        store = [...data]
-    }
-    return null
+function createStore (data=[]){
+     if(store === null){
+         store = [...data]
+     }
+     return null
 }
 
-function getStore(){
+function getStore (){
     return store
 }
 
-export {createStore, getStore}
+function updateStore(newStore){
+ 
+    store = [...newStore]
+}
+ 
+export {createStore, getStore, updateStore}
+
+
+ 

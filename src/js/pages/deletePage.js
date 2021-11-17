@@ -5,6 +5,7 @@ import button from "../components/ui/button"
 import reducers from "../redux/reducers";
 import { getStore } from "../redux/store";
 import { Router } from "../router/routes";
+import items from "../components/cards/todoitem";
 
 const cancelButton = button("cancel")
 const deleteButton = button("delete")
@@ -18,6 +19,11 @@ const deletePage = function(props){
     page.append(makeElement(logo))
     page.append(h1)
 
+    //displaying the selected list item
+    const selectedItem = items(props)
+    page.append(selectedItem)
+    selectedItem.querySelector('.controls').remove()
+
     function cleanUp(){
         cancelButton.removeEventListener('click', onCancelDelete)
         deleteButton.removeEventListener('click', onRemoveItem)
@@ -27,12 +33,11 @@ const deletePage = function(props){
         Router('/list')
     }
     function onRemoveItem (e){
-        console.log(props)
         if (props !== null)
         {
             Router('/list')
             const removeItem = props
-            const index = getStore.findIndex(item => item.id === removeItem.id)
+            const index = getStore().findIndex(item => item.id === removeItem.id)
             const action = {
                 type:"delete",
                 payload:{index},

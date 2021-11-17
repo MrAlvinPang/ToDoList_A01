@@ -2,51 +2,51 @@
     {
         "id":"qw3er57u",
         "category":"Home",
-        "description":"short description of the to do",
+        "description":"Clean up the house today, and make sure to do the dishes!",
         "isComplete":true,
-        "startDate": "Wednesday Septermber 3rd",
+        "startDate": "Wed Sept 3rd",
         "startTime": "9:00am",
-        "endDate": "Wednesday September 3rd",
-        "endTime": "9:00am"
+        "endDate": "Thur Sept 4th",
+        "endTime": "10:00am"
     },
     {
         "id":"k4a9s04l",
         "category":"School",
-        "description":"short description of the to do",
+        "description":"Complete upcoming assignments and study for test!",
         "isComplete":true,
-        "startDate": "Wednesday Septermber 3rd",
-        "startTime": "9:00am",
-        "endDate": "Wednesday September 3rd",
-        "endTime": "9:00am"
+        "startDate": "Thur Sept 4th",
+        "startTime": "11:00am",
+        "endDate": "Fri Sept 5th",
+        "endTime": "12:00pm"
     },
     {
         "id":"q23lkf09",
         "category":"Health",
-        "description":"short description of the to do",
+        "description":"Make sure to exercise today!",
         "isComplete":true,
-        "startDate": "Wednesday Septermber 3rd",
-        "startTime": "9:00am",
-        "endDate": "Wednesday September 3rd",
-        "endTime": "9:00am"
+        "startDate": "Wed Sept 3rd",
+        "startTime": "5:00pm",
+        "endDate": "Wed Sept 3rd",
+        "endTime": "6:00pm"
     },
     {
         "id":"vm4ns92l",
         "category":"Friends",
-        "description":"short description of the to do",
+        "description":"Don't forget your plans for tonight!",
         "isComplete":true,
-        "startDate": "Wednesday Septermber 3rd",
-        "startTime": "9:00am",
-        "endDate": "Wednesday September 3rd",
-        "endTime": "9:00am"
+        "startDate": "Wed Sept 3rd",
+        "startTime": "9:00pm",
+        "endDate": "Wed Sept 3rd",
+        "endTime": "11:00pm"
     },
     {
         "id":"1lskd0po",
         "category":"Work",
-        "description":"short description of the to do",
+        "description":"Sunday shift, remember to restock the shelves",
         "isComplete":true,
-        "startDate": "Wednesday Septermber 3rd",
+        "startDate": "Sun Sept 7th",
         "startTime": "9:00am",
-        "endDate": "Wednesday September 3rd",
-        "endTime": "9:00am"
+        "endDate": "Sun Sept 7th",
+        "endTime": "5:00pm"
     }
 ]

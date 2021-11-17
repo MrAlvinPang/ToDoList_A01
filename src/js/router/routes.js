@@ -2,12 +2,16 @@ import landingPage from "../pages/landingPage";
 import listPage from "../pages/listPage";
 import errorPage from "../pages/errorPage";
 import deletePage from "../pages/deletePage";
+import editPage from "../pages/editPage";
+import addPage from "../pages/addPage";
 
 const routes = {
     "/": landingPage,
     "/list": listPage,
     "/*": errorPage,
     "/delete": deletePage,
+    "/add": addPage,
+    "/edit": editPage,
 }
 
 const Router = (pathname, params = null) => {

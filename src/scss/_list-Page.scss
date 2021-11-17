@@ -74,13 +74,15 @@
     }
 
     .add-button{
-        font-size: 3rem;
-        height: 5rem;
-        width: 5rem;
+        font-size: 1.5rem;
+        height: 3rem;
+        width: 3rem;
         border-radius: 10rem;
         text-align: center;
-        background-color: blue;
+        background-color: #4568F8;
         color: white;
+        border:none;
+        box-shadow: 1px 1px 1px 1px #ddd;
     }
 
     .add-button:hover{

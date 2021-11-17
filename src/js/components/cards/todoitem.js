@@ -7,7 +7,7 @@ const items = function({id, category, description, isComplete, endDate}){
     <p class="card-desc"> ${description}</p>
     <p class="card-comp">Comp: ${isComplete}</p>
     <p class="card-date">Due: ${endDate}</p>
-    <p class="controls"><button id="edit">edit</button><button id="delete">delete</button></p> 
+    <p class="controls"><button id="edit" data-key=${id}>edit</button><button id="delete" data-key=${id}>delete</button></p> 
     </li>
     `;
     return makeElement(template)

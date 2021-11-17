@@ -317,8 +317,9 @@
    font-size: 100%;
    font-weight: normal;
  }
- ul {
+ ul, li {
    list-style: none;
+   list-style-type: none;
  }
  button,
  input,
@@ -351,4 +352,9 @@
    text-align: left;
  }
  
- 
+ input:focus,
+ select:focus,
+ textarea:focus,
+ button:focus{
+   outline: none;
+ }
