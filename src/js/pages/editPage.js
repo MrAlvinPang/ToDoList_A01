@@ -1,9 +1,9 @@
+import { getStore } from "../redux/store";
 import heading from "../components/ui/heading";
 import makeElement from "../utils/makeElement";
 import logo from "../components/icons/logo";
 import button from "../components/ui/button"
 import reducers from "../redux/reducers";
-import { getStore } from "../redux/store";
 import { Router } from "../router/routes";
 import todolist from "../components/cards/todolist";
 
@@ -27,7 +27,27 @@ const editPage = function(props){
         Router('/list')
     }
     function onSaveItem(e) {
-        
+        if (props != null){
+            Router('/list')
+            const saveItem = props
+            console.log(props.isComplete)
+            saveItem.description = formHeader.querySelector('#title').value
+            saveItem.category = formHeader.querySelector('#category').value
+            saveItem.startDate = formHeader.querySelector('#startDate').value
+            saveItem.startTime = formHeader.querySelector('#startTime').value
+            saveItem.endDate = formHeader.querySelector('#endDate').value
+            saveItem.endTime = formHeader.querySelector('#endTime').value
+            saveItem.isComplete = formHeader.querySelector('#complete').value
+            const index = getStore().findIndex(item => item.id === saveItem.id)
+            const action = {
+                type:"edit",
+                payload:{index},
+                cb:() => Router('/list')
+            }
+            reducers(action)
+            cleanUp()
+        }
+
     }
 
     //creation of form

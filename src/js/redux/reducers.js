@@ -1,20 +1,31 @@
 import {getStore, updateStore} from "./store"
 
 function reducer  (action){
-    console.log(action)
-
+    const store = getStore();   
+    const index = action.payload.index;         
+    const newStore = [...store.slice(0, index), ...store.slice(index + 1)]
     switch(action.type){
         case "delete":
             // grabing the current store
-         const store = getStore();       
-         const index = action.payload.index;         
-         const newStore = [...store.slice(0, index), ...store.slice(index + 1)]
+         store;    
+         index;
+         newStore;
          updateStore(newStore)
          action.cb( )
         return  "remove item";
-        case "edit": 
+        case "edit":
+            store;    
+            index;
+            const editStore = [...store];
+            updateStore(editStore)
+            action.cb( )
         return "edit item";
-        case "add": 
+        case "add":
+            store;    
+            index;
+            const addStore = [...store];
+            updateStore(addStore)
+            action.cb( )
         return "add new item";
         default: return store
     }
