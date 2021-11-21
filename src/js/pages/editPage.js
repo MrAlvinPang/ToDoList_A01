@@ -113,7 +113,6 @@ const editPage = function(props){
     const formHeader = makeElement(formTemplate)
     // adding a listener to accurately display checkbox value.
     formHeader.querySelector('#complete').addEventListener('click', function(evt){
-        console.log(document.getElementById('complete').checked)
         if (document.getElementById('complete').checked == false)
         {
             document.getElementById('complete').checked = false
