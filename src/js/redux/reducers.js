@@ -21,10 +21,6 @@ function reducer  (action){
             action.cb( )
         return "edit item";
         case "add":
-            store;    
-            index;
-            const addStore = [...store];
-            updateStore(addStore)
             action.cb( )
         return "add new item";
         default: return store
