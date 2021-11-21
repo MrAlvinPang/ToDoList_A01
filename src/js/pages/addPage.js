@@ -49,7 +49,7 @@ const addPage = function (props){
     }
 
     //adding new to do item
-    let newItem = [{
+    let newItem = {
         id: '',
         category: '',
         description: '',
@@ -58,8 +58,8 @@ const addPage = function (props){
         endDate: '',
         endTime: '',
         isComplete: ''
-    }]
-    newItem = [...keyGenerator(newItem)]
+    }
+
     let formTemplate = `
     <form method="post">
         <div class="id-field">

@@ -34,7 +34,6 @@ const listPage = function(){
 
     //Event handler for removing employee
     function onDeleteItem (e){
-        console.log(e.currentTarget)
         const itemId = e.currentTarget.dataset.key
         const item = getStore().filter((item) => item.id === itemId)
         cleanUp()
