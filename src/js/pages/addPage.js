@@ -3,12 +3,13 @@ import makeElement from "../utils/makeElement";
 import logo from "../components/icons/logo";
 import button from "../components/ui/button"
 import reducers from "../redux/reducers";
-import { createStore, getStore } from "../redux/store";
+import { createStore, getStore, updateStore } from "../redux/store";
 import { Router } from "../router/routes";
-import keyGenerator from "../utils/key";
+import { v4 as uuidv4} from 'uuid'
 
 const cancelButton = button("cancel")
 const addButton = button("add")
+const newId = uuidv4().substr(0,8);
 
 const addPage = function (props){
     const page = document.createElement('div')
@@ -16,7 +17,6 @@ const addPage = function (props){
     page.classList.add("add-page")
     page.append(makeElement(logo))
     page.append(h1)
-
     function cleanUp(){
         cancelButton.removeEventListener('click', onCancelEdit)
         // editButton.removeEventListener('click', onRemoveItem)
@@ -26,10 +26,7 @@ const addPage = function (props){
         Router('/list')
     }
     function onAddItem(e){
-        if (props != null){
             Router('/list')
-            const saveItem = props
-            console.log(props.isComplete)
             newItem.description = formHeader.querySelector('#title').value
             newItem.category = formHeader.querySelector('#category').value
             newItem.startDate = formHeader.querySelector('#startDate').value
@@ -37,7 +34,9 @@ const addPage = function (props){
             newItem.endDate = formHeader.querySelector('#endDate').value
             newItem.endTime = formHeader.querySelector('#endTime').value
             newItem.isComplete = formHeader.querySelector('#complete').value
-            const index = getStore()
+            let index = getStore()
+            index = index.concat([newItem])
+            updateStore(index)
             const action = {
                 type:"add",
                 payload:{index},
@@ -45,12 +44,10 @@ const addPage = function (props){
             }
             reducers(action)
             cleanUp()
-        }
     }
 
-    //adding new to do item
-    let newItem = {
-        id: '',
+    const newItem = {
+        id: newId,
         category: '',
         description: '',
         startDate: '',
