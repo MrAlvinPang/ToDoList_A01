@@ -30,14 +30,13 @@ const editPage = function(props){
         if (props != null){
             Router('/list')
             const saveItem = props
-            console.log(props.isComplete)
             saveItem.description = formHeader.querySelector('#title').value
             saveItem.category = formHeader.querySelector('#category').value
             saveItem.startDate = formHeader.querySelector('#startDate').value
             saveItem.startTime = formHeader.querySelector('#startTime').value
             saveItem.endDate = formHeader.querySelector('#endDate').value
             saveItem.endTime = formHeader.querySelector('#endTime').value
-            saveItem.isComplete = formHeader.querySelector('#complete').value
+            saveItem.isComplete = formHeader.querySelector('#complete').checked
             const index = getStore().findIndex(item => item.id === saveItem.id)
             const action = {
                 type:"edit",
@@ -112,9 +111,20 @@ const editPage = function(props){
     cancelButton.addEventListener('click', onCancelEdit)  
     editButton.addEventListener('click', onSaveItem)
     const formHeader = makeElement(formTemplate)
-
-    //collecting user inputed values
-
+    // adding a listener to accurately display checkbox value.
+    formHeader.querySelector('#complete').addEventListener('click', function(evt){
+        console.log(document.getElementById('complete').checked)
+        if (document.getElementById('complete').checked == false)
+        {
+            document.getElementById('complete').checked = false
+            props.isComplete.checked = false
+        }
+        else if (document.getElementById('complete').checked == true)
+        {
+            document.getElementById('complete').checked = true
+            props.isComplete.checked = true
+        }
+    })
     page.append(formHeader)
     pageHeader.querySelector('div').append(cancelButton, editButton)
     page.append(pageHeader)
