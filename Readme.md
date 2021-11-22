@@ -1,7 +1,7 @@
 ## The supplied Readme from Jim's Starter Kit - Edited by Alvin Pang
 
 ## Pre Flight Check
-The kit uses node modules so check your operating system and make sure that you have node installed.
+The kit uses node modules so check your operating system and make sure that you have node installed. The webpage is best viewed in a 500x260px window.
 
 Download the starter kit and install the required node modules. You should see some version of node echoed back __v15.14.0__. Just make sure that the node version your using is minimum of v12.0.0
 ```bash
@@ -32,3 +32,7 @@ If you want to change the production folder to __public__ instead of __dist__ th
  ```bash
   npm run clean:dev
  ```
+
+ # How it works
+
+ On start up, you will be prompted to press he "Let's Go" button to continue. The list page has a button to add, edit, and delete to do list items. The checkbox can only be changed within the edit screen. 
